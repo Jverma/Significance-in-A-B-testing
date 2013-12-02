@@ -39,7 +39,7 @@ shinyServer(function(input, output) {
 		else{
 		Confidence_B <-c(conversion_rateB - 1.96*seB,  conversion_rateB + 1.96*seB)
 		}
-		paste("The conversion rate for variation case is", conversion_rateB, "with the", input$variable, "%", confidence interval", "[",round(Confidence_B[1], digits=3), ",", round(Confidence_B[2], digits=3),"]")
+		paste("The conversion rate for variation case is", conversion_rateB, "with the", input$variable, "%", "confidence interval", "[",round(Confidence_B[1], digits=3), ",", round(Confidence_B[2], digits=3),"]")
 	})
 
 	output$Zscore <- renderText({
